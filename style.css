@@ -1,0 +1,426 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 🌌 Body */
+
+body {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            -45deg,
+            #020617,
+            #0f172a,
+            #111827,
+            #1e293b
+        );
+
+    background-size: 400% 400%;
+
+    animation:
+        bgAnimation 10s ease infinite;
+
+    overflow: hidden;
+}
+
+
+/* ✨ Animated Background */
+
+@keyframes bgAnimation {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* 🌌 Cinematic Particles */
+
+.particles {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+
+/* ⭐ Floating Lights */
+
+.particles span {
+
+    position: absolute;
+
+    display: block;
+
+    width: 4px;
+    height: 4px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px cyan,
+        0 0 30px cyan;
+
+    animation:
+        animateParticles linear infinite;
+}
+
+
+/* ✨ Different Particle Styles */
+
+.particles span:nth-child(1) {
+
+    left: 10%;
+
+    animation-duration: 12s;
+}
+
+.particles span:nth-child(2) {
+
+    left: 20%;
+
+    width: 3px;
+    height: 3px;
+
+    animation-duration: 18s;
+}
+
+.particles span:nth-child(3) {
+
+    left: 35%;
+
+    animation-duration: 10s;
+}
+
+.particles span:nth-child(4) {
+
+    left: 50%;
+
+    width: 2px;
+    height: 2px;
+
+    animation-duration: 14s;
+}
+
+.particles span:nth-child(5) {
+
+    left: 65%;
+
+    animation-duration: 20s;
+}
+
+.particles span:nth-child(6) {
+
+    left: 80%;
+
+    width: 5px;
+    height: 5px;
+
+    animation-duration: 16s;
+}
+
+.particles span:nth-child(7) {
+
+    left: 90%;
+
+    animation-duration: 11s;
+}
+
+
+/* 🌠 Particle Animation */
+
+@keyframes animateParticles {
+
+    0% {
+
+        transform:
+            translateY(100vh)
+            scale(0);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-10vh)
+            scale(1);
+
+        opacity: 0;
+    }
+}
+
+
+/* 🎮 Main Card */
+
+.container {
+
+    width: 380px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,0.3),
+        0 0 40px rgba(0,255,255,0.2);
+
+    animation:
+        floatCard 3s ease-in-out infinite;
+
+    z-index: 10;
+}
+
+
+/* 🛸 Floating Card */
+
+@keyframes floatCard {
+
+    0% {
+
+        transform: translateY(0px);
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+    }
+
+    100% {
+
+        transform: translateY(0px);
+    }
+}
+
+
+/* 🏷️ Heading */
+
+h1 {
+
+    color: white;
+
+    margin-bottom: 15px;
+
+    font-size: 32px;
+}
+
+
+/* ✨ Subtitle */
+
+.subtitle {
+
+    margin-bottom: 20px;
+
+    color: #cbd5e1;
+}
+
+
+/* 📊 Stats */
+
+.stats {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+/* 🧊 Stat Cards */
+
+.card {
+
+    flex: 1;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* 🎯 Input */
+
+input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    color: white;
+}
+
+
+/* ✨ Placeholder */
+
+input::placeholder {
+
+    color: #cbd5e1;
+}
+
+
+/* 🔥 Buttons */
+
+button {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    color: black;
+
+    background: cyan;
+
+    transition: 0.3s;
+
+    font-weight: bold;
+}
+
+
+/* ✨ Hover */
+
+button:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 20px cyan,
+        0 0 40px cyan;
+}
+
+
+/* 🔄 Restart Button */
+
+.restart {
+
+    background: #f43f5e;
+
+    color: white;
+}
+
+
+/* ✨ Restart Hover */
+
+.restart:hover {
+
+    box-shadow:
+        0 0 20px #f43f5e,
+        0 0 40px #f43f5e;
+}
+
+
+/* 💬 Message */
+
+#message {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    min-height: 50px;
+}
+
+
+/* 📈 Attempts */
+
+#attempts {
+
+    margin-top: 10px;
+
+    color: #94a3b8;
+}
+
+
+/* 📱 Mobile Responsive */
+
+@media(max-width: 500px) {
+
+    .container {
+
+        width: 90%;
+
+        padding: 25px;
+    }
+
+    .stats {
+
+        flex-direction: column;
+    }
+}
