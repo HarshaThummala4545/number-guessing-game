@@ -31,7 +31,7 @@ https://harshathummala4545.github.io/number-guessing-game/
 
 ## 📸 Preview
 
-![Game Preview](assets/preview.png)
+![Game Preview]![Game Preview](preview.png)
 
 ---
 
